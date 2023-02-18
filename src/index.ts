@@ -65,7 +65,7 @@ const user: {
 
  } = {id: 1, name: "shivam"};
 
- // good way 
+ // good way to define object
 
  type User =  {
 
@@ -78,6 +78,83 @@ const user: {
     id: 1,
     name: "shivam",
  }
+
+ // type Assertion
+
+ let cid: any = 1;
+
+ let customer = <Number>cid
+
+ console.log(customer);
+ 
+
+ // Function in typescipt following function return addition of two number and result will number
+
+ function addNum(x: number, y:number): number{
+
+   return x+y;
+
+ }
+
+ console.log(addNum(1, 21));
+ 
+// Interface in Typescript
+
+interface UserInterface{
+
+   id: number
+   name:string
+   age: number
+
+}
+
+const user2: UserInterface = {
+  
+   id: 1,
+   name: "shivam",
+   age: 23,
+}
+
+console.log(user2.age);
+
+
+// we can also use interface with functions
+
+interface MathFunc{
+   (x:number, y:number):number
+
+}
+
+const add: MathFunc = (x:number, y:number):number => x + y;
+const sub: MathFunc = (x:number, y:number):number => x - y;
+const multi: MathFunc = (x:number, y:number):number => x * y;
+
+console.log(add(2, 3));
+console.log(sub(2, 3));
+console.log(multi(2, 3));
+
+// classes in typescript
+
+class Person {
+
+   id: number
+   name?: string 
+    
+
+constructor(id: number, name: string) {
+
+   this.id = id;
+   this.name = name;
+}
+
+}
+
+const shiv = new Person(1, "shivam");
+const satya = new Person(2, "Satyam");
+
+console.log(shiv);
+console.log(satya);
+
 
 
 

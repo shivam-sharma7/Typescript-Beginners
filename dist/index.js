@@ -29,9 +29,47 @@ let collageId = 22;
 // Enums 
 var Direction1;
 (function (Direction1) {
-    Direction1[Direction1["up"] = 0] = "up";
+    Direction1[Direction1["Up"] = 0] = "Up";
     Direction1[Direction1["Down"] = 1] = "Down";
     Direction1[Direction1["Lef"] = 2] = "Lef";
     Direction1[Direction1["Right"] = 3] = "Right";
 })(Direction1 || (Direction1 = {}));
 console.log(Direction1.Down);
+// Objects in typescript
+const user = { id: 1, name: "shivam" };
+const user1 = {
+    id: 1,
+    name: "shivam",
+};
+// type Assertion
+let cid = 1;
+let customer = cid;
+console.log(customer);
+// Function in typescipt following function return addition of two number and result will number
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(1, 21));
+const user2 = {
+    id: 1,
+    name: "shivam",
+    age: 23,
+};
+console.log(user2.age);
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+const multi = (x, y) => x * y;
+console.log(add(2, 3));
+console.log(sub(2, 3));
+console.log(multi(2, 3));
+// classes in typescript
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+const shiv = new Person(1, "shivam");
+const satya = new Person(2, "Satyam");
+console.log(shiv);
+console.log(satya);
